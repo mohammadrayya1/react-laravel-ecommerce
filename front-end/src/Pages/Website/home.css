@@ -1,0 +1,72 @@
+/* النمط العام للصورة */
+.img-preview {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.img-preview:hover {
+    transform: scale(1.05);
+}
+
+/* النمط للصورة المكبرة والخلفية الشفافة */
+.zoomed-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.zoomed-image {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* إضافة في ملف CSS الخاص بك */
+@media (max-width: 768px) {
+
+    .navbar-area .main-menu-search,
+    .nav-hotline {
+        display: none;
+        /* إخفاء عناصر غير ضرورية على الشاشات الصغيرة */
+    }
+
+    .navbar-area .header-middle {
+        flex-direction: column;
+        /* تغيير التوجيه ليكون عموديًا */
+    }
+
+    .navbar-area .middle-right-area {
+        flex-grow: 1;
+        /* السماح للمنطقة بالتمدد لتأخذ مساحة متاحة */
+    }
+}
+
+/* CSS */
+.header-middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .header-middle {
+        flex-direction: column;
+    }
+}
+
+
+
+.table-cell-centered {
+    vertical-align: middle;
+    height: 100px;
+    text-align: center;
+
+}
